@@ -1,7 +1,7 @@
 ---
 name: user-handbook
 title: User Handbook
-version: 1.0
+version: true
 nav:
   - modules/ROOT/nav.adoc
   - modules/installing/nav.adoc
