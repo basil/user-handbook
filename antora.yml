@@ -1,0 +1,16 @@
+---
+name: user-handbook
+title: User Handbook
+version: 1.0
+nav:
+  - modules/ROOT/nav.adoc
+  - modules/installing/nav.adoc
+  - modules/using/nav.adoc
+  - modules/pipeline/nav.adoc
+  - modules/blueocean/nav.adoc
+  - modules/managing/nav.adoc
+  - modules/security/nav.adoc
+  - modules/system-administration/nav.adoc
+  - modules/scaling/nav.adoc
+  - modules/troubleshooting/nav.adoc
+  - modules/glossary/nav.adoc

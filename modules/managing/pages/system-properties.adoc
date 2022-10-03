@@ -1,0 +1,73 @@
+= Jenkins Features Controlled with System Properties
+
+Jenkins has several "hidden" features that can be enabled with system properties.
+This page documents many of them and explain how to configure them on your instance.
+
+Some system properties related to the Remoting library used for communication between controller and agents are documented in https://github.com/jenkinsci/remoting/blob/master/docs/configuration.md[that component's repository].
+
+== Usage
+
+System properties are defined by passing `-Dproperty=value` to the `java` command line to start Jenkins.
+Make sure to pass all of these arguments *before* the `-jar` argument, otherwise they will be ignored.
+Example:
+
+```sh
+java -Dhudson.footerURL=http://example.org -jar jenkins.war
+```
+
+The following lists the properties and the version of Jenkins they were introduced in.
+
+* `*Property*` - Java property name
+* *Default* - Default value if not explicitly set
+* *Since* - The version of Jenkins the property was introduced in
+* *Description* - Other notes
+
+=== Compatibility
+
+We do **NOT** guarantee that system properties will remain unchanged and functional indefinitely.
+These switches are often experimental in nature, and subject to change without notice.
+If you find these useful, please file a ticket to promote it to an official feature.
+
+
+== Properties in Jenkins Core
+
+[NOTE]
+Due to the very large number of system properties used, often just added as a "safety valve" or "escape hatch" in case a change causes problems, this list is not expected to be complete.
+
+++++
+<style>
+dd {
+  margin-left: 30px;
+}
+dd div.tag {
+}
+span.tag {
+    display: inline-block;
+    border: 1px solid #666;
+    background-color: #eee;
+    color: #333;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0 0.5rem;
+    margin: 0.25rem 0.5rem 0.25rem 0;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    text-transform: capitalize;
+}
+/* Work around wrapper block elements added for Asciidoctor conversions that would break the layout */
+.def div {
+    display: inline-block;
+}
+.def div p {
+    margin: 0;
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function(event) {
+    anchors.add('dt');
+});
+</script>
+++++
